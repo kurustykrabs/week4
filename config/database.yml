@@ -1,0 +1,7 @@
+development:
+  adapter: postgresql
+  database: receiptsnote
+  username: root
+  password:
+  host: localhost
+  port: 5432
