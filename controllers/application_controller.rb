@@ -65,6 +65,7 @@ class ApplicationController < Sinatra::Base
     end
 
     post '/receipt/:receipt_id/product/:product_id/edit' do
+      receipt = Receipt.find(params[:receipt_id])
       product = Product.find(params[:product_id])
         if product
           product.update(params[:product])
