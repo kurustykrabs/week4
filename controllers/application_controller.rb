@@ -61,6 +61,18 @@ class ApplicationController < Sinatra::Base
       @receipt = Receipt.find(params[:receipt_id])
       @product = Product.find(params[:product_id])
       @products = @receipt.products.all
-      erb :add_product_page
+      erb :edit_product_page
     end
+
+    post '/receipt/:receipt_id/product/:product_id/edit' do
+      product = Product.find(params[:product_id])
+        if product
+          product.update(params[:product])
+          redirect "/add-product/#{receipt.id}"
+        else
+          "Sorry, an error has occured."
+        end
+    end
+
+
 end

@@ -1,0 +1,6 @@
+<form action = "/receipt/<%= @receipt.id %>/product/<%= @product.id %>/edit" method = "post">
+  <input type = "text" name = "product[name]" placeholder = 'Product Name'>
+  <input type = "text" name = "product[quantity]" placeholder = 'Quantity'>
+  <input type = "text" name = "product[unit_price]" placeholder = 'Unit Price'>
+  <input type = "submit" value = "Update product">
+</form>
